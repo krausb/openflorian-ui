@@ -1,0 +1,66 @@
+{
+  "name": "template-js.reactjs",
+  "version": "1.0.0",
+  "description": "Template: JS - React.JS",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bastian Kraus - https://github.com/krausb/",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "css-loader": "^3.2.0",
+    "express": "^4.17.1",
+    "express-winston": "^3.4.0",
+    "leaflet": "^1.5.1",
+    "morgan": "^1.9.1",
+    "node-sass": "^4.13.0",
+    "query-string": "^6.8.3",
+    "react": "^16.11.0",
+    "react-bootstrap": "^0.32.4",
+    "react-button": "^1.2.1",
+    "react-dom": "^16.11.0",
+    "react-hot-loader": "^4.12.15",
+    "react-leaflet": "^2.5.0",
+    "react-router-dom": "^4.3.1",
+    "react-upload-file": "^2.0.0-beta.6",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@babel/preset-stage-2": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "keywords": []
+}
