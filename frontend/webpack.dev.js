@@ -6,13 +6,15 @@ const common = require('./webpack.common.js');
 
 const DIST_DIR = path.resolve(__dirname, 'client/dist');
 
-module.exports = merge(common, {
-  mode: 'development',
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
-  devServer: {
-    contentBase: DIST_DIR,
-    hot: true
-  }
-});
+module.exports = (env, argv) => {
+  return merge(common(env, argv), {
+    mode: 'development',
+    plugins: [
+      new webpack.HotModuleReplacementPlugin()
+    ],
+    devServer: {
+      contentBase: DIST_DIR,
+      hot: true
+    }
+  });
+};

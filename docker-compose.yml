@@ -15,19 +15,31 @@ services:
             KONG_PROXY_ACCESS_LOG: /dev/stdout
             KONG_PROXY_ERROR_LOG: /dev/stderr
             KONG_DECLARATIVE_CONFIG: /kong.yml
-        networks:
-            - openflorian-net
         depends_on:
             - openflorian
+            - openflorian-ui
         links:
             - openflorian
+            - openflorian-ui
         volumes:
           - ./kong.yml:/kong.yml
         ports:
             - "8000:8000/tcp"
         restart: on-failure
+        networks:
+            - openflorian-net
+        expose:
+            - '8080'
+    openflorian-ui:
+        build: frontend/.
+        container_name: openflorian-ui
+        networks:
+            - openflorian-net
+        depends_on:
+            - openflorian
+        restart: on-failure
     openflorian:
-        build: .
+        build: backend/.
         container_name: openflorian
         restart: on-failure
         depends_on:

@@ -5,12 +5,14 @@ import App from './components/App';
 
 import './styles.scss';
 
+console.log("API_BASE_URL: " + process.env.API_BASE_URL);
+
 /**
   * Application entrypoint
   */
 render((
   <BrowserRouter>
-    <App apiUrl="http://localhost:8080"/>
+    <App apiUrl={process.env.API_BASE_URL}/>
   </BrowserRouter>
 ), document.getElementById("openflorian-app"));
 

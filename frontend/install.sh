@@ -31,9 +31,12 @@ npm install \
     leaflet \
     query-string \
     node-sass \
+    sass \
+    fibers \
     sass-loader \
     css-loader \
     style-loader \
+    dotenv \
     --save
 
 npm install \

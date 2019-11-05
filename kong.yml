@@ -6,4 +6,10 @@ services:
   routes:
   - name: openflorian-route
     paths:
+    - /api
+- name: openflorian-ui
+  url: http://openflorian-ui:8080
+  routes:
+  - name: openflorian-ui-route
+    paths:
     - /

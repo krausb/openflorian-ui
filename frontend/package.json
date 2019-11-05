@@ -4,8 +4,8 @@
   "description": "Template: JS - React.JS",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --open --env.ENVIRONMENT=development --config webpack.dev.js",
+    "build": "webpack --env.ENVIRONMENT=production --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bastian Kraus - https://github.com/krausb/",
@@ -26,8 +26,10 @@
   },
   "dependencies": {
     "css-loader": "^3.2.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-winston": "^3.4.0",
+    "fibers": "^4.0.2",
     "leaflet": "^1.5.1",
     "morgan": "^1.9.1",
     "node-sass": "^4.13.0",
@@ -40,6 +42,7 @@
     "react-leaflet": "^2.5.0",
     "react-router-dom": "^4.3.1",
     "react-upload-file": "^2.0.0-beta.6",
+    "sass": "^1.23.3",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "winston": "^3.2.1"
