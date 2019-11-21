@@ -2,7 +2,7 @@
 # based on tesseract 4 runtime environment
 # additionals:
 # - java 11
-FROM tesseractshadow/tesseract4re
+FROM $baseimage
 
 RUN apt-get update
 RUN apt-get install --fix-missing -y openjdk-11-jdk

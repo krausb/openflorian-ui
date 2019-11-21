@@ -42,7 +42,7 @@ services:
         build:
             context: backend/.
             args:
-                baseimage: tesseractshadow/tesseract4re
+                baseimage:
         container_name: openflorian
         restart: on-failure
         depends_on:
@@ -64,7 +64,7 @@ services:
         expose:
             - '8080'
     mysql:
-        image: mysql/mysql-server:8.0
+        image: tobi312/rpi-mysql
         container_name: mysql
         restart: on-failure
         environment:
