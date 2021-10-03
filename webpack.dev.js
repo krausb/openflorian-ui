@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 
 const common = require('./webpack.common.js');
 
@@ -13,7 +13,7 @@ module.exports = (env, argv) => {
       new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
-      contentBase: DIST_DIR,
+      static: [DIST_DIR],
       hot: true
     }
   });
